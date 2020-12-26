@@ -34,6 +34,7 @@
         .select-border{
             border: 1px solid #d1d3e2!important;
         }
+        
     </style>
 
 
@@ -342,7 +343,7 @@
                                             </select><!-- End -->
                                         </div>
 
-                                        <!-- <div class="mb-3">
+                                        <div class="mb-3">
                                             <div class="shadow-sm mb-5">
                                                 
                                                     <div class="table-responsive" id="mydiv">
@@ -360,7 +361,7 @@
                                                                 <tr>
                                                                     <td class="cell">
                                                                         
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="" >
+                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="checkbox" >
                                                                         
                                                                     </td>
                                                                     <td class="cell">Title 1</td>
@@ -375,7 +376,7 @@
                                                                 <tr>
                                                                     <td class="cell">
                                                                         
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="" >
+                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="checkbox" >
                                                                         
                                                                     </td>
                                                                     <td class="cell">Title 2</td>
@@ -390,7 +391,7 @@
                                                                 <tr>
                                                                     <td class="cell">
                                                                         
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="" >
+                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="checkbox" >
                                                                         
                                                                     </td>
                                                                     <td class="cell">Title 2</td>
@@ -407,7 +408,7 @@
                                                     </div>
                                                	
                                             </div>
-                                        </div> -->
+                                        </div>
 
                                          <div class="mb-3">
                                             <div class="shadow-sm mb-5">
@@ -477,11 +478,95 @@
                                         </div>
 
 
-                                        <!-- <div class="mb-3">
-                                            <label class="form-label">Label</label>
-                                            <input type="text" class="form-control" id="setting-input-2" value="ExMyb" required="">
+                                        
+                                         <input type="submit" class="btn btn-success bg-gradient-success" value="Save Changes">
+                                
+                                    </form>
+                                </div><!--//app-card-body-->
+                                
+                            </div><!--//app-card-->
+                        </div>
+                    </div>
+
+                    <!-- Add custom service -->
+                    <div class="row p-4 ">
+                        <div class="col-12 col-md-4 edit-section">
+                            <h3 class="section-title">Add Custom Services</h3>
+                            <div class="section-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius architecto fuga vel! Facilis voluptate laborum quaerat!</div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="app-card app-card-settings shadow-sm p-4">
+                                
+                                <div class="app-card-body">
+                                    <form class="settings-form custom-service-form">
+                                      
+
+                                        <div class="mb-3">
+                                            <label class="form-label"> Add Custom Services</label>
+                                           <!--  <input type="text" class="form-control" id="setting-input-2" value="ExMyb" required=""> -->
                                         </div>
-                                         -->
+
+                                        <div class="mb-3">
+                                            <div class="shadow-sm mb-5">
+                                                
+                                                    <div class="table-responsive" id="mydiv">
+                                                        <table class="table mb-0 text-center" id="cs-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    
+                                                                    <th class="cell">Service Name</th>
+                                                                    <th class="cell">Minimum Price </th>
+                                                                    <th class="cell">Maximum Price </th>
+                                                                    <th class="cell"> Action</th>
+                                                                </tr>
+                                                            </thead> 
+                                                            <tbody id="custom-tbody" class="show">
+                                                                <tr>
+                                                                    <td class="cell">
+                                                                        <input name="customservice" id="customservice" type="input" class="select-border" required>
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        ₹ <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;" required>
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        ₹ <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;" required>
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        <input type="button" value="Add" class="btn btn-primary bg-gradient-primary">
+                                                                        <input type="button" value="Remove" class="btn btn-danger bg-gradient-danger remove-service">    
+                                                                    </td>
+                                                                </tr>
+                                                                
+
+                                                               <!--  <tr id="custom-row">
+                                                                    <td class="cell">
+                                                                        <input name="customservice" id="customservice" type="input" class="select-border" required>
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        ₹ <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;" required>
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        ₹ <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;" required>
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        <input type="button" value="Add" class="btn btn-primary bg-gradient-primary ">
+                                                                        <button type="button" id="remove-service" class="btn btn-danger bg-gradient-danger ">Remove</button>
+                                                                      
+                                                                    </td>
+                                                                </tr> -->
+                                                                
+                                                               
+                            
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                               	
+                                            </div>
+                                        </div>
+                                        
+                                         <input type="submit" class="btn btn-success bg-gradient-success" value="Save Changes">
+                                         <input type="button" class="btn btn-info bg-gradient-info" id="add-service" value="+ Add more">
+                                
                                     </form>
                                 </div><!--//app-card-body-->
                                 
@@ -544,7 +629,7 @@
     <!-- Bootstrap select plugin JavaScript-->
     <script src="vendor/bs-select/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-
+    <script src="js/select-service.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -552,7 +637,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <script>
+ <!--    <script>
         $(function () {
             $('.selectpicker').selectpicker();
         });
@@ -657,7 +742,7 @@
 
 
 
-    </script>
+    </script> -->
 
 </body>
 
