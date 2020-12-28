@@ -100,6 +100,9 @@ $(function() {
 
 $(document).ready(function(){
     // Check or Uncheck All checkboxes
+    // Add required attribute when tr is checked
+
+
     // $("#checkbox_all").change(function(){
     //   var checked = $(this).is(':checked');
     //   if(checked){
@@ -214,22 +217,48 @@ $(document).ready(function(){
 //Add row and remove row in custom Service
 
 $(document).ready(function(){
- 
+    var os_trIndex = 1;
+        var os_customservice = 1;
+        var os_minprice = 1;
+        var os_maxprice = 1;
+        var tr_remove;
     $('.custom-service-form').on('click','#add-service',function(){
-        $("#custom-tbody").append( /* "<tr>"+ "<td><input type='text'/></td>" */
-        '<tr id="custom-row">'+
-            '<td class="cell"><input name="customservice" id="customservice" type="input" class="select-border" required></td>'+
-            '<td class="cell">₹ <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;" required></td>'+
-            '<td class="cell">₹ <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;" required></td>'+
-            '<td class="cell"><input type="button" value="Add" class="btn btn-primary bg-gradient-primary "> <button type="button" id="remove-service" class="btn btn-danger bg-gradient-danger ">Remove</button></td>'+    
-        '</tr>'
+        
+        $("#custom-tbody").append(
+        `<tr id="ctr_${++os_trIndex}">
+            <td class="cell"><input name="customservice" id="customservice_${os_trIndex}"  type="text" class="select-border" required></td>
+            <td class="cell">₹ <input name="minPriceDefault" id="min_price_${os_trIndex}" type="text" class="select-border" style="width: 50%;" required></td>
+            <td class="cell">₹ <input name="maxPriceDefault" id="max_price_${os_trIndex}" type="text" class="select-border" style="width: 50%;" required></td>
+            <td class="cell"><input type="button" value="Add" class="btn btn-primary bg-gradient-primary "> <button type="button" data-tr-id="ctr_${os_trIndex}" id="" class="btn btn-danger bg-gradient-danger remove-service">Remove</button></td>   
+        </tr>`
         ); 
         
     });  
     
-$('#custom-tbody').on('click','#remove-service',function(){
+$('#custom-tbody').on('click','.remove-service',function(){
    /*  $(this).closet('tr').remove(); */
-   $('#custom-row').remove();
+    
+   var child = $(this).closest('tr').nextAll();
+
+    child.each(function(){
+        var id = $(this).attr('id');
+        // var mid1 = "#custom-tbody tr#" + id + " > td";
+        var iid = parseInt(id.substring(4));
+        var newid = "ctr_" + (iid-1);
+        var sname = "customservice_" + (iid-1);
+        var sminprice = "min_price_" + (iid-1);
+        var smaxprice = "max_price_" + (iid-1);
+        var mid1 = $('#custom-tbody tr#' + id +' > td:nth-child(1) > input').prop('id',sname);
+        var mid2 = $('#custom-tbody tr#' + id +' > td:nth-child(2) > input').prop('id',sminprice);
+        var mid3 = $('#custom-tbody tr#' + id +' > td:nth-child(3) > input').prop('id',smaxprice);
+        $(this).prop('id',newid);
+   });
+
+   tr_remove = "#" + $(this).data('tr-id');
+   $(tr_remove).remove(); 
+   --os_trIndex;
+
+
 }); 
 });
 
