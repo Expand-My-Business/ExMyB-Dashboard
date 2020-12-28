@@ -118,7 +118,86 @@ $(document).ready(function(){
      }
  
    });
+
+   // Add required attribute when tr is checked
+
+   //rnd 1 --working fine
+/*    $(".service-form").on('click','#save-serivce',function(){
+    
+    if($('.checkbox').prop('checked')){
+      $('#sr_min_price').prop('required',true);
+      $('#sr_max_price').prop('required',true);
+      
+    }else{  
+      $('#sr_min_price').prop('required',false);
+      $('#sr_max_price').prop('required',false);
+    }
+  }); */
+
+  //rnd 2
+/*         $('.service-form').keyup(function () {
+            if ($(this).val() == '') {
+                //Check to see if there is any text entered
+                // If there is no text within the input ten disable the button
+                $('#save-serivce').prop('disabled', true);
+            } else {
+                //If there is text in the input, then enable the button
+                $('#save-serivce').prop('disabled', false);
+            }
+        }); */
+
+        //rnd 3
+       /*  $('.service-form').keyup(function() {
+
+            var empty = false;
+            $('form > input').each(function() {
+                if ($(this).val() == '') {
+                    empty = true;
+                }
+            });
+
+            if (empty) {
+                $('#save-serivce').attr('disabled', 'disabled');
+            } else {
+                $('#save-serivce').removeAttr('disabled');
+            }
+        }); */
+
+        //rnd 4
+        $('.service-form').keyup(function() {
+        var inputs = document.getElementsByTagName("input");
+        var filled = true;
+        var oneChecked = false;
+        
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].type === "text" && !inputs[i].value) {
+                filled = false;
+            }
+            
+            if (inputs[i].type === "checkbox" && inputs[i].checked) {
+                oneChecked = true;
+            }
+    
+        }
+    
+        if (!oneChecked) {
+            filled = false;
+        }
+    
+        
+        if (filled) {
+            document.getElementById("save-serivce").disabled = false;
+        } else {
+            document.getElementById("save-serivce").disabled = true;
+        }
+    });
+
+
+
+
  });
+
+
 
 //Add row and remove row in custom Service
 

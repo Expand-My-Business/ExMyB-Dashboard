@@ -11417,6 +11417,9 @@ body.sidebar-toggled footer.sticky-footer {
   vertical-align: baseline;
   border-radius: .25rem;
 }
+.select-border {
+  border: 1px solid #d1d3e2!important;
+}
 
 /* ---Support--- */
 

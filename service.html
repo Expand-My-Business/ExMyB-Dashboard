@@ -97,6 +97,13 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
+            <!-- Nav Item - Service -->
+            <li class="nav-item">
+                <a class="nav-link" href="service.html">
+                    <i class="fas fa-fw fa-user-plus"></i>
+                    <span>Services</span></a>
+            </li>
+
             <!-- Nav Item - Client -->
             <li class="nav-item">
                 <a class="nav-link" href="clients.html">
@@ -325,7 +332,7 @@
                             <div class="app-card app-card-settings shadow-sm p-4">
                                 
                                 <div class="app-card-body">
-                                    <form class="settings-form">
+                                    <form class="settings-form service-form">
                                         <div class="mb-3">
                                             <label class="form-label"> Services</label>
                                             <!-- Multiselect dropdown -->
@@ -343,7 +350,7 @@
                                             </select><!-- End -->
                                         </div>
 
-                                        <div class="mb-3">
+                                         <div class="mb-3">
                                             <div class="shadow-sm mb-5">
                                                 
                                                     <div class="table-responsive" id="mydiv">
@@ -366,10 +373,10 @@
                                                                     </td>
                                                                     <td class="cell">Title 1</td>
                                                                     <td class="cell">
-                                                                        <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;">
+                                                                        <input name="minPriceDefault" id="sr_min_price" type="input" class="select-border" >
                                                                     </td>
                                                                     <td class="cell">
-                                                                        <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;">
+                                                                        <input name="maxPriceDefault" id="sr_max_price" type="input" class="select-border" >
                                                                     </td>
                                                                 </tr>
                                                                 
@@ -381,10 +388,10 @@
                                                                     </td>
                                                                     <td class="cell">Title 2</td>
                                                                     <td class="cell">
-                                                                        <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;">
+                                                                        <input name="minPriceDefault" id="sr_min_price" type="input" class="select-border" style="width: 50%;">
                                                                     </td>
                                                                     <td class="cell">
-                                                                        <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;">
+                                                                        <input name="maxPriceDefault" id="sr_max_price" type="input" class="select-border" style="width: 50%;">
                                                                     </td>
                                                                 </tr>
                                                                 
@@ -396,21 +403,21 @@
                                                                     </td>
                                                                     <td class="cell">Title 2</td>
                                                                     <td class="cell">
-                                                                        <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;">
+                                                                        <input name="minPriceDefault" id="sr_min_price" type="input" class="select-border" style="width: 50%;">
                                                                     </td>
                                                                     <td class="cell">
-                                                                        <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;">
+                                                                        <input name="maxPriceDefault" id="sr_max_price" type="input" class="select-border" style="width: 50%;">
                                                                     </td>
                                                                 </tr>
-                            
+
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                	
                                             </div>
-                                        </div>
+                                        </div> 
 
-                                         <div class="mb-3">
+                                        <!--  <div class="mb-3">
                                             <div class="shadow-sm mb-5">
                                                 
                                                     <div class="table-responsive" id="mydiv">
@@ -472,14 +479,14 @@
                             
                                                             </tbody>
                                                         </table>
-                                                    </div><!--//table-responsive-->
+                                                    </div>
                                                	
                                             </div>
-                                        </div>
+                                        </div> -->
 
 
                                         
-                                         <input type="submit" class="btn btn-success bg-gradient-success" value="Save Changes">
+                                         <input type="submit" class="btn btn-success bg-gradient-success" id="save-serivce" value="Save Changes" disabled="disabled">
                                 
                                     </form>
                                 </div><!--//app-card-body-->
