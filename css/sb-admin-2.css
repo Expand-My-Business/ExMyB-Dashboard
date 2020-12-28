@@ -11421,6 +11421,11 @@ body.sidebar-toggled footer.sticky-footer {
   border: 1px solid #d1d3e2!important;
 }
 
+/* Service page */
+.th-bg-color{
+  background-color: #f5f6fe;
+}
+
 /* ---Support--- */
 
 

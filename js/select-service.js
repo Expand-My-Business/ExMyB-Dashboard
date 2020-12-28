@@ -5,7 +5,12 @@ $(function () {
 
 var pre_selected = [];
 
-var myjson = {'1': {'d_type': 2,'has_child': 1,'l2_info': {'id': 42,'name': 'smm'},'l3_info': [{'id': 2,'name': 'digital'},{'id': 3,'name': 'facebook'}]}};
+var myjson = {
+    '1': {'d_type': 2,'has_child': 1,'l2_info': {'id': 42,'name': 'smm'},'l3_info': [{'id': 2,'name': 'digital'},{'id': 3,'name': 'facebook'}]},
+    '2': {'d_type': 2,'has_child': 1,'l2_info': {'id': 42,'name': 'smm'},'l3_info': [{'id': 2,'name': 'digital'},{'id': 3,'name': 'facebook'}]},
+    '3': {'d_type': 2,'has_child': 1,'l2_info': {'id': 42,'name': 'smm'},'l3_info': [{'id': 2,'name': 'digital'},{'id': 3,'name': 'facebook'}]},
+    '4': {'d_type': 2,'has_child': 1,'l2_info': {'id': 42,'name': 'smm'},'l3_info': [{'id': 2,'name': 'digital'},{'id': 3,'name': 'facebook'}]}
+};
 
 $(function() {
     $('#service-level2').change(function(e) {
@@ -28,13 +33,13 @@ $(function() {
             if(new_id){
 
                 var tthead = `
-                                                    <thead>
+                                                    <thead class="th-bg-color">
                                                         <tr>
-                                                            <th class="cell">  <input name="all_checkboxes" id="checkbox_all" type="checkbox" value="l2_${new_id}" ></th>
+                                                            <th class="cell">  <input name="all_checkboxes" class="top_check all_checkboxes" id="ch_${new_id}" type="checkbox" value="l2_${new_id}" ></th>
                                                             <th class="cell"><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border" disabled></th>
                                                             <th class="cell">₹ <input name="l2_${new_id}_minprice" id="min_price_default" type="input" placeholder="Min Price" class="select-border" ></th>
                                                             <th class="cell">₹ <input name="l2_${new_id}_maxprice" id="max_price_default" type="input" placeholder="Max Price" class="select-border" ></th>
-                                                            <th class="cell"><button type="button" class="btn" data-toggle="collapse" data-target="#collapse"><i class="fas fa-chevron-down"></i></button></th>
+                                                            <th class="cell"><button type="button" class="btn" data-toggle="collapse" data-target="#collapse_${new_id}"><i class="fas fa-chevron-down"></i></button></th>
                                                         </tr>
                                                     </thead>
                 `;
@@ -49,7 +54,7 @@ $(function() {
                                                         <tr>
                                                             <td class="cell">
                                                                 
-                                                                <input name="all_checkboxes" id="checkbox_1" type="checkbox" value="l2_${new_id}_l3_${temp[j]['id']}">
+                                                                <input name="all_checkboxes" class="ch_${new_id} all_checkboxes" id="checkbox_1" type="checkbox" value="l2_${new_id}_l3_${temp[j]['id']}">
                                                                 
                                                             </td>
                                                             <td class="cell"><input type="text" name="l2_${new_id}_l3_${temp[j]['id']}_name" value="${temp[j]['name']}"></td>
@@ -71,9 +76,9 @@ $(function() {
 
                 $('#mydiv').prepend(`
                 
-                                            <table class="table mb-2 text-center">
+                                            <table id="t_${new_id}" class="table my-4 text-center shadow-sm ">
                                                     ${tthead}
-                                                    <tbody id="collapse" class="show">
+                                                    <tbody id="collapse_${new_id}" class="show">
                                                         
                                                         ${all_ttrow}
                                                        
@@ -95,18 +100,85 @@ $(function() {
 
 $(document).ready(function(){
     // Check or Uncheck All checkboxes
-    $("#checkbox_all").change(function(){
-      var checked = $(this).is(':checked');
-      if(checked){
-        $(".checkbox").each(function(){
-          $(this).prop("checked",true);
-        });
-      }else{
-        $(".checkbox").each(function(){
-          $(this).prop("checked",false);
-        });
-      }
+    // $("#checkbox_all").change(function(){
+    //   var checked = $(this).is(':checked');
+    //   if(checked){
+    //     $(".checkbox").each(function(){
+    //       $(this).prop("checked",true);
+    //     });
+    //   }else{
+    //     $(".checkbox").each(function(){
+    //       $(this).prop("checked",false);
+    //     });
+    //   }
+    // });
+
+    $("div#mydiv").on('click',"input.all_checkboxes",function(){
+        var myval = $(this).val();
+        console.log("test: "+myval);
+        var minprice = myval + "_minprice";
+        var maxprice = myval + "_maxprice";
+        var i_minp = "input[name='" + minprice + "']";
+        var i_maxp = "input[name='" + maxprice + "']";
+        if($(this).prop('checked')){
+          console.log("checked");
+          $(i_minp).prop('required',true);
+          $(i_maxp).prop('required',true);
+        }else{
+          $(i_minp).prop('required',false);
+          $(i_maxp).prop('required',false);
+          console.log("not checked");
+        }
+
+
+
     });
+
+    $("div#mydiv").on('change',"input.top_check.all_checkboxes",function(){
+        console.log("working");
+        var checked = $(this).is(':checked');
+        var myclass = "." + $(this).attr('id');
+        console.log("myclass: " + myclass);
+        if(checked){
+        // console.log("working1");
+
+            $(myclass).each(function(){
+              $(this).prop("checked",true);
+              var tminprice = $(this).val() + "_minprice";
+              var tmaxprice = $(this).val() + "_maxprice";
+              var i_minp = "input[name='" + tminprice + "']";
+              var i_maxp = "input[name='" + tmaxprice + "']";
+              if($(this).prop('checked')){
+                $(i_minp).prop('required',true);
+                $(i_maxp).prop('required',true);
+              }else{
+                $(i_minp).prop('required',false);
+                $(i_maxp).prop('required',false);
+                console.log("not checked");
+              }
+            });
+        }else{
+        // console.log("working2");
+
+            $(myclass).each(function(){
+              $(this).prop("checked",false);
+              var tminprice = $(this).val() + "_minprice";
+              var tmaxprice = $(this).val() + "_maxprice";
+              var i_minp = "input[name='" + tminprice + "']";
+              var i_maxp = "input[name='" + tmaxprice + "']";
+              if($(this).prop('checked')){
+                $(i_minp).prop('required',true);
+                $(i_maxp).prop('required',true);
+              }else{
+                $(i_minp).prop('required',false);
+                $(i_maxp).prop('required',false);
+                console.log("not checked");
+              }
+            });
+        }
+    });
+
+    // $(".top_check.all_checkboxes")
   
    // Changing state of CheckAll checkbox 
    $(".checkbox").click(function(){
@@ -133,66 +205,6 @@ $(document).ready(function(){
       $('#sr_max_price').prop('required',false);
     }
   }); */
-
-  //rnd 2
-/*         $('.service-form').keyup(function () {
-            if ($(this).val() == '') {
-                //Check to see if there is any text entered
-                // If there is no text within the input ten disable the button
-                $('#save-serivce').prop('disabled', true);
-            } else {
-                //If there is text in the input, then enable the button
-                $('#save-serivce').prop('disabled', false);
-            }
-        }); */
-
-        //rnd 3
-       /*  $('.service-form').keyup(function() {
-
-            var empty = false;
-            $('form > input').each(function() {
-                if ($(this).val() == '') {
-                    empty = true;
-                }
-            });
-
-            if (empty) {
-                $('#save-serivce').attr('disabled', 'disabled');
-            } else {
-                $('#save-serivce').removeAttr('disabled');
-            }
-        }); */
-
-        //rnd 4
-        $('.service-form').keyup(function() {
-        var inputs = document.getElementsByTagName("input");
-        var filled = true;
-        var oneChecked = false;
-        
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].type === "text" && !inputs[i].value) {
-                filled = false;
-            }
-            
-            if (inputs[i].type === "checkbox" && inputs[i].checked) {
-                oneChecked = true;
-            }
-    
-        }
-    
-        if (!oneChecked) {
-            filled = false;
-        }
-    
-        
-        if (filled) {
-            document.getElementById("save-serivce").disabled = false;
-        } else {
-            document.getElementById("save-serivce").disabled = true;
-        }
-    });
-
-
 
 
  });
