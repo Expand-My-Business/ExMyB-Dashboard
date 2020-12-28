@@ -321,65 +321,51 @@
                         <div class="tab-pane fade active show" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
                             <div class="app-card app-card-orders-table shadow-sm mb-5">
                                 <div class="app-card-body">
-                                    <div class="table-responsive">
-                                        <table class="table app-table-hover mb-0 text-center">
-                                            <thead>
-                                                <tr class="row m-0">
-                                                    <th class="d-inline-block cell col-2">Phase</th>
-                                                    <th class="d-inline-block cell col-6">Description</th>
-                                                    <th class="d-inline-block cell col-2">Timelines(in Days)</th>
-                                                    <th class=" d-inline-block cell col-2">Payment Release</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="row m-0">
-                                                    <td class="d-inline-block cell col-2">01</td>
-                                                    <td class="d-inline-block cell col-6">Home page, About us, Contact, Projects Tab and Inquiry tab
-                                                        will be presented to client for first Project.
-                                                        - Design edits, colour theme changes, format etc.</td>
-                                                    <td class="d-inline-block cell col-2">5 Days</td>
-                                                    <td class="d-inline-block cell col-2">₹5000</td>
-                                                                    
-                                                    
-                                                </tr>
-                                                <tr class="row m-0">
-                                                    <td class="d-inline-block cell col-2">02</td>
-                                                    <td class="d-inline-block cell col-6">
-                                                        <textarea cols="2"  class="w-100 text-left select-border" >Home page, About us, Contact, Projects Tab and Inquiry tab.</textarea>
-                                                    </td>
-                                                    <!-- <td class="d-inline-block cell col-2">5 Days</td> -->
-                                                    <td class="d-inline-block cell col-2"><input type="number" name="phaseDay" id="phaseDay"  class="select-border"> </td>
-                                                    <!-- <td class="d-inline-block cell col-2">₹5000</td> -->
-                                                    <td class="d-inline-block cell col-2">₹ <input type="number" name="phasePrice" id="phasePrice"  class="select-border"> </td>
-                                                                    
-                                                    
-                                                </tr>
-                                                
-                                                <!-- <tr class="row  m-0">
-                                                    <td class="cell col-2">03</td>
-                                                    <td class="cell col-6">Home page, About us, Contact, Projects Tab and Inquiry tab
-                                                        will be presented to client for Second Project.</td>
-                                                    <td class="cell col-2">5 Days</td>
-                                                    <td class="cell col-2">₹5000</td>
-                                                    
-                                                </tr> -->
-                                                
-                                                <!-- <tr class="row  m-0">
-                                                    <td class="cell col-2">04</td>
-                                                    <td class="cell col-6">After making required changes as per client will deliver the
-                                                        final project with all the requirements.
-                                                        (Back end page, addition/subtraction of properties
-                                                        etc.)
+                                    <form class=" custom-phase-form"></form>
+                                        <div class="table-responsive">
+                                            <table class="table app-table-hover mb-0 text-center">
+                                                <thead>
+                                                    <tr class="row m-0">
+                                                        <th class="d-inline-block cell col-2">Phase</th>
+                                                        <th class="d-inline-block cell col-4">Description</th>
+                                                        <th class="d-inline-block cell col-2">Timelines(in Days)</th>
+                                                        <th class=" d-inline-block cell col-2">Payment Release</th>
+                                                        <th class=" d-inline-block cell col-2">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="row m-0 ph-tr">
+                                                        <td class="d-inline-block cell col-2" id="phase_1" >1</td>
+                                                        <td class="d-inline-block cell col-4">
+                                                            <textarea cols="1" rows="1" id="desc_1"  class="w-100 text-left select-border" placeholder="Write Description..." required></textarea>
                                                         </td>
-                                                    <td class="cell col-2">5 Days</td>
-                                                    <td class="cell col-2">₹5000</td>
-                                                    
-                                                </tr> -->
-            
-                                            </tbody>
-                                        </table>
-                                        
-                                    </div><!--//table-responsive-->
+                                                        <td class="d-inline-block cell col-2"><input type="number"  name="phaseDay" id="phaseDay_1"  class="select-border" required> </td>
+                                                        <td class="d-inline-block cell col-2">₹ <input type="number" name="phasePrice" id="phasePrice_1"  class="select-border" required> </td>
+                                                        <td class="d-inline-block cell col-2">
+                                                            <button type="button" class="btn btn-info bg-gradient-info" id="save-phase" value=""><i class="fas fa-check"></i></button>
+                                                            <button type="button" class="btn btn-danger bg-gradient-danger" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
+                                                        </td>              
+                                                        
+                                                    </tr>
+                                                    <!-- <tr class="row m-0 ph-tr">
+                                                        <td class="d-inline-block cell col-2">2</td>
+                                                        <td class="d-inline-block cell col-4">
+                                                            <textarea cols="1" rows="1" class="w-100 text-left select-border" placeholder="Write Description..." ></textarea>
+                                                        </td>
+                                                        <td class="d-inline-block cell col-2"><input type="number" name="phaseDay" id="phaseDay"  class="select-border"> </td>
+                                                        <td class="d-inline-block cell col-2">₹ <input type="number" name="phasePrice" id="phasePrice"  class="select-border"> </td>
+                                                        <td class="d-inline-block cell col-2">
+                                                            <button type="button" class="btn btn-info bg-gradient-info" id="save-phase" value=""><i class="fas fa-check"></i></button>
+                                                            <button type="button" class="btn btn-danger bg-gradient-danger" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
+                                                        </td>                
+                                                        
+                                                    </tr> -->
+                
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div><!--//table-responsive-->
+                                    </form>    
                                    
                                 </div><!--//app-card-body-->		
                             </div><!--//app-card-->
@@ -389,7 +375,6 @@
                         <div class="text-center">
                             <input type="submit" class="btn btn-success bg-gradient-success" value="Save Phase">
                             <input type="button" class="btn btn-info bg-gradient-info" id="add-phase" value="+ Add Phase">
-                            <input type="button" class="btn btn-danger bg-gradient-danger" id="remove-phase" value="- Remove Phase"> 
                         </div>
                     </div>
                     
@@ -452,6 +437,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/phase.js"></script>
 
 </body>
 
