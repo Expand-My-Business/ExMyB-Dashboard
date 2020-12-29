@@ -229,14 +229,13 @@ $(document).ready(function(){
             <td class="cell"><input name="customservice" id="customservice_${os_trIndex}"  type="text" class="select-border" required></td>
             <td class="cell">₹ <input name="minPriceDefault" id="min_price_${os_trIndex}" type="text" class="select-border" style="width: 50%;" required></td>
             <td class="cell">₹ <input name="maxPriceDefault" id="max_price_${os_trIndex}" type="text" class="select-border" style="width: 50%;" required></td>
-            <td class="cell"><input type="button" value="Add" class="btn btn-primary bg-gradient-primary "> <button type="button" data-tr-id="ctr_${os_trIndex}" id="" class="btn btn-danger bg-gradient-danger remove-service">Remove</button></td>   
+            <td class="cell"><button type="button" data-tr-id="ctr_${os_trIndex}" id="" class="btn btn-danger bg-gradient-danger remove-service"><i class="far fa-trash-alt"></i></button></td>   
         </tr>`
         ); 
         
     });  
     
 $('#custom-tbody').on('click','.remove-service',function(){
-   /*  $(this).closet('tr').remove(); */
     
    var child = $(this).closest('tr').nextAll();
 
@@ -251,12 +250,15 @@ $('#custom-tbody').on('click','.remove-service',function(){
           $('#custom-tbody tr#' + id +' > td:nth-child(1) > input').prop('id',sname);
           $('#custom-tbody tr#' + id +' > td:nth-child(2) > input').prop('id',sminprice);
           $('#custom-tbody tr#' + id +' > td:nth-child(3) > input').prop('id',smaxprice);
+          $('#custom-tbody tr#' + id +' > td:nth-child(4) > button').attr('data-tr-id',newid);
           $(this).prop('id',newid);
+          
    });
 
    tr_remove = "#" + $(this).data('tr-id');
    $(tr_remove).remove(); 
    --os_trIndex;
+  
 
 
 }); 
