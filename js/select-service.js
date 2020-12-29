@@ -218,9 +218,9 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     var os_trIndex = 1;
-        var os_customservice = 1;
+        /* var os_customservice = 1;
         var os_minprice = 1;
-        var os_maxprice = 1;
+        var os_maxprice = 1; */
         var tr_remove;
     $('.custom-service-form').on('click','#add-service',function(){
         
@@ -248,10 +248,10 @@ $('#custom-tbody').on('click','.remove-service',function(){
         var sname = "customservice_" + (iid-1);
         var sminprice = "min_price_" + (iid-1);
         var smaxprice = "max_price_" + (iid-1);
-        var mid1 = $('#custom-tbody tr#' + id +' > td:nth-child(1) > input').prop('id',sname);
-        var mid2 = $('#custom-tbody tr#' + id +' > td:nth-child(2) > input').prop('id',sminprice);
-        var mid3 = $('#custom-tbody tr#' + id +' > td:nth-child(3) > input').prop('id',smaxprice);
-        $(this).prop('id',newid);
+          $('#custom-tbody tr#' + id +' > td:nth-child(1) > input').prop('id',sname);
+          $('#custom-tbody tr#' + id +' > td:nth-child(2) > input').prop('id',sminprice);
+          $('#custom-tbody tr#' + id +' > td:nth-child(3) > input').prop('id',smaxprice);
+          $(this).prop('id',newid);
    });
 
    tr_remove = "#" + $(this).data('tr-id');
