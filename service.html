@@ -51,12 +51,8 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon ">
-                    <img class="brand-img" src="img/logo/exmyb_logo_white.png">
+                    <img class="brand-img " src="img/logo/exmyb_logo_white.png">
                 </div>
-                <!-- <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div> -->
-                <!-- <div class="sidebar-brand-text mx-3">Exmyb</div> -->
             </a>
 
             <!-- Divider -->
@@ -85,44 +81,51 @@
                     <span>Account</span>
                 </a>
                 <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile"
-                data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="personal.html">Personal</a>
-                    <a class="collapse-item" href="business.html">Business</a>
-                    <a class="collapse-item" href="#">Security</a>
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="personal.html">Personal</a>
+                        <a class="collapse-item" href="business.html">Business</a>
+                        <a class="collapse-item" href="service.html">Services</a>
+                    </div>
                 </div>
-            </div>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Service -->
-            <li class="nav-item">
-                <a class="nav-link" href="service.html">
-                    <i class="fas fa-fw fa-user-plus"></i>
-                    <span>Services</span></a>
-            </li>
-
             <!-- Nav Item - Client -->
             <li class="nav-item">
-                <a class="nav-link" href="clients.html">
+                <a class="nav-link" href="clients-approved.html">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Clients</span></a>
             </li>
 
-            <!-- Nav Item - Deals -->
+            <!-- Nav Item - Leads -->
             <li class="nav-item">
+                <a class="nav-link" href="leads-approved.html">
+                    <i class="fas fa-filter"></i>
+                    <span>Leads</span></a>
+            </li>
+
+            <!-- Nav Item - Deals -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="deals-closed.html">
                     <i class="fas fa-fw fa-receipt"></i>
                     <span>Deals</span></a>
+            </li> -->
+
+            <!-- Nav Item - Support -->
+            <li class="nav-item">
+                <a class="nav-link" href="support.html">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>Support</span></a>
             </li>
 
             <!-- Nav Item - Support -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-envelope"></i>
-                    <span>Support</span></a>
+                <a class="nav-link" href="faq.html">
+                    <i class="fas fa-fw fa-question-circle"></i>
+                    <span>FAQ</span></a>
             </li>
 
             <!-- Nav Item - Logout -->
@@ -314,18 +317,28 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+
+                    <nav class="page-navs margin-free">
+                        <div class="nav-scroller">
+                            <div class="nav nav-center nav-tabs">
+                                <a class="nav-link" href="personal.html">Basic</a>
+                                <a class="nav-link" href="business.html">Business</a>
+                                <a class="nav-link active" href="#">Service</a>
+                                
+                            </div>
+                        </div>
+                    </nav>
                     
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between m-2">
+                    <!-- <div class="d-sm-flex align-items-center justify-content-between m-2">
                         <h1 class="h3 mb-0 exmyb-text-black font-weight-bold">Services</h1>
                         
-                    </div>
-                    <hr class="mb-4">
+                    </div> -->
 
                    
                     <div class="row p-4 ">
                         <div class="col-12 col-md-4 edit-section">
-                            <h3 class="section-title">Select your Services</h3>
+                            <h3 class="section-title font-weight-bold">Select your Services</h3>
                             <div class="section-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius architecto fuga vel! Facilis voluptate laborum quaerat!</div>
                         </div>
                         <div class="col-12 col-md-8">
@@ -498,7 +511,7 @@
                     <!-- Add custom service -->
                     <div class="row p-4 ">
                         <div class="col-12 col-md-4 edit-section">
-                            <h3 class="section-title">Add Custom Services</h3>
+                            <h3 class="section-title font-weight-bold">Add Custom Services</h3>
                             <div class="section-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius architecto fuga vel! Facilis voluptate laborum quaerat!</div>
                         </div>
                         <div class="col-12 col-md-8">
