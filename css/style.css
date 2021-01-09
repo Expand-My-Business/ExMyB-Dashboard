@@ -11366,6 +11366,28 @@ body.sidebar-toggled footer.sticky-footer {
   color: #252930;
   font-weight: 600;
 }
+.app-icon-holder{
+  display: inline-block;
+  background: #f5f6fe;
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 50%;
+}
+.app-icon-holder i{
+    color: #191919;
+    font-size: 16px;
+    line-height: 30px;
+    background:-moz-linear-gradient(bottom, #4e77e0  10%, #000000 100%); 
+    background: -webkit-linear-gradient(bottom, #4e77e0  10%, #000000 100%); 
+    background: linear-gradient(bottom, #4e77e0  10%, #000000 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
 .app-card-settings {
   font-size: 1rem;
 }
