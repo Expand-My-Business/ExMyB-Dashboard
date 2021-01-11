@@ -11443,6 +11443,31 @@ body.sidebar-toggled footer.sticky-footer {
   border: 1px solid #d1d3e2!important;
 }
 
+/* Business Page */
+.item-data.profile-img {
+  max-width: 120px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.item-data.profile-img img{ 
+    border-radius: 50%;
+    border:5px solid #f1f1f1;
+    box-shadow: 1px 1px 4px 3px #eeeff7;
+
+}
+input[type="file"]{
+  padding: 0 10px;
+  display: inline-block;
+  line-height: 30px;
+  padding-left: 0px;
+}
+input[type=file]::-webkit-file-upload-button {
+border: 2px solid transparent;
+background-color: #D1D3E2;
+transition: 1s;
+margin-right: 10px;
+}
 /* Service page */
 .th-bg-color{
   background-color: #f5f6fe;
