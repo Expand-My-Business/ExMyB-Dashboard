@@ -11283,6 +11283,25 @@ body.sidebar-toggled footer.sticky-footer {
   border-radius: .25rem;
   opacity: .5;
 }
+@media (max-width: 575.98px) {
+  .desktop.brand-img {
+    display: none;
+  }
+  .mobile{
+    display: block;
+    height: 40px!important;
+  }
+  .welcome-app-card-body h3{font-size: 18px;font-weight: bold;}
+  .welcome-text {font-size: 14px;}
+}
+@media (min-width:576px) and (max-width:1200px) {
+  .desktop.brand-img {
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+}
 
 /* Accout Tab */
 
