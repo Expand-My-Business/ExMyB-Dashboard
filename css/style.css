@@ -11447,7 +11447,10 @@ body.sidebar-toggled footer.sticky-footer {
 .th-bg-color{
   background-color: #f5f6fe;
 }
-
+/* datepicker */
+.datepicker table tr td span.disabled:hover {
+  cursor: not-allowed;
+}
 /* ---Support--- */
 
 
