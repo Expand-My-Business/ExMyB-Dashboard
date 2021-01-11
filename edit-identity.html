@@ -9,11 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clients Approved Table</title>
+    <title>Edit Identity Details | ExMyb</title>
 
-    <!-- Favicons -->
-    <link href="img/logo/favicon.png" rel="icon">
-    <link href="img/logo/apple-touch-icon.png" rel="apple-touch-icon">
+     <!-- Favicons -->
+     <link href="img/logo/favicon.png" rel="icon">
+     <link href="img/logo/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Custom fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -179,7 +179,7 @@
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 7, 2019</div>
-                                        ₹290.29 has been deposited into your account!
+                                        $290.29 has been deposited into your account!
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -303,113 +303,43 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between m-2">
-                        <h1 class="h3 mb-0 exmyb-text-black font-weight-bold">Clients</h1>
+
+                    <div class="d-sm-flex align-items-center justify-content-between m-4">
+                        <h1 class="h3 mb-0 exmyb-text-black font-weight-bold">Edit Identity Details</h1>
                         
                     </div>
+
                     <hr class="mb-4">
 
-                    <nav id="client-table-tab" class="app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
-                        <a class="flex-sm-fill text-sm-center nav-link active" id="approved-tab"  href="clients-approved.html" >Approved</a>
-                        <a class="flex-sm-fill text-sm-center nav-link" id="pending-tab"  href="clients-pending.html">Pending</a>
-                        <a class="flex-sm-fill text-sm-center nav-link" id="cancelled-tab"  href="clients-cancelled.html" >Cancelled</a>
-                    </nav>
-
-                    <div id="client-table-tab-content">
-                        <div class="">
-                            <div class="app-card app-card-orders-table shadow-sm mb-5">
+                    
+                    <div class="row p-4 ">
+                        <div class="col-12 col-md-4 edit-section">
+                            <h3 class="section-title">Identity</h3>
+                            <div class="section-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius architecto fuga vel! Facilis voluptate laborum quaerat!</div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="app-card app-card-settings shadow-sm p-4">
+                                
                                 <div class="app-card-body">
-                                    <div class="table-responsive">
-                                        <table class="table app-table-hover mb-0 text-left">
-                                            <thead>
-                                                <tr>
-                                                    <th class="cell">Order</th>
-                                                    <th class="cell">Customer</th>
-                                                    <th class="cell">Project</th>
-                                                    <th class="cell">Industry</th>
-                                                    <th class="cell">Location</th>
-                                                    <th class="cell">Date & Time</th>
-                                                    <th class="cell">Status</th>
-                                                    <th class="cell">Total</th>
-                                                    <th class="cell"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="cell">#01</td>
-                                                    <td class="cell">Shrawan Kumar</td>
-                                                    <td class="cell"><span class="truncate">Web Development</span></td>
-                                                    <td class="cell">Information Techonlogy</td>
-                                                    <td class="cell">Delhi, India</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
-                                                    <td class="cell"><span class="badge bg-success">Approved</span></td>
-                                                    <td class="cell">₹25935</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="cell">#02</td><td class="cell">Sneha Pathrawal</td>
-                                                    <td class="cell"><span class="truncate">Static Website</span></td>
-                                                    <td class="cell">Accountatnt</td>
-                                                    <td class="cell">Delhi, India</td>
-                                                    <td class="cell"><span class="cell-data">16 Oct</span><span class="note">01:16 AM</span></td>
-                                                    <td class="cell"><span class="badge bg-success">Approved</span></td>
-                                                    <td class="cell">₹8000</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td class="cell">#03</td>
-                                                    <td class="cell">Abdul</td>
-                                                    <td class="cell"><span class="truncate">App Development</span></td>
-                                                    <td class="cell">Gambling</td>
-                                                    <td class="cell">Delhi, India</td>
-                                                    <td class="cell"><span class="cell-data">15 Oct</span><span class="note">8:07 PM</span></td>
-                                                    <td class="cell"><span class="badge bg-success">Approved</span></td>
-                                                    <td class="cell">₹350000</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
-                                                </tr>
-                                                
-                                                
-                                                <tr>
-                                                    <td class="cell">#04</td>
-                                                    <td class="cell">Manoj Dubey</td>
-                                                    <td class="cell"><span class="truncate">Ecommerce Website</span></td>
-                                                    <td class="cell">Fashion</td>
-                                                    <td class="cell">UP, India</td>
-                                                    <td class="cell"><span class="cell-data">11 Oct</span><span class="note">11:18 AM</span></td>
-                                                    <td class="cell"><span class="badge bg-success">Approved</span></td>
-                                                    <td class="cell">₹67800</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
-                                                </tr>
-            
-                                            </tbody>
-                                        </table>
-                                    </div><!--//table-responsive-->
-                                   
-                                </div><!--//app-card-body-->		
+                                    <form class="settings-form">
+                                        <div class="mb-3">
+                                            <label  class="form-label">GST Number</label>
+                                            <input type="text" class="form-control" id="setting-input-1" value="22 XXXXXXXXXX 1z5" required="">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">PAN Number</label>
+                                            <input type="email" class="form-control" id="setting-input-3" value="FBIPS80L" >
+                                        </div>
+                                        <button type="submit" class="btn btn-success bg-gradient-success">Save Changes</button>
+                                    </form>
+                                </div><!--//app-card-body-->
+                                
                             </div><!--//app-card-->
-                            <nav class="app-pagination">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                    </li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
-                                    </li>
-                                </ul>
-                            </nav><!--//app-pagination-->
-                            
-                        </div><!--//tab-pane-->
+                        </div>
                     </div>
 
                 </div>
                 <!-- /.container-fluid -->
-                
 
             </div>
             <!-- End of Main Content -->
