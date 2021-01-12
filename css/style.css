@@ -11283,14 +11283,26 @@ body.sidebar-toggled footer.sticky-footer {
   border-radius: .25rem;
   opacity: .5;
 }
+.del-btn{
+  padding: 1px 6px;
+  color: #000;
+  transition:  all .1s;
+}
+.del-btn:hover{
+    color: #fff;
+    background-color: #e74a3b;
+    background-image: linear-gradient(180deg, #e74a3b 10%, #be2617 100%);
+    background-size: cover;
+    transition:  all .1s;
+}
 @media (max-width: 575.98px) {
-  .desktop.brand-img {
+  /* .desktop.brand-img {
     display: none;
   }
   .mobile{
     display: block;
     height: 40px!important;
-  }
+  } */
   .welcome-app-card-body h3{font-size: 18px;font-weight: bold;}
   .welcome-text {font-size: 14px;}
 }
@@ -11443,7 +11455,7 @@ body.sidebar-toggled footer.sticky-footer {
 .app-card-orders-table .table td.cell {
   border-color: #e7e9ed;
   color: #5d6778;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .badge {

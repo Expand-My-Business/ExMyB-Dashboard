@@ -7,14 +7,15 @@ $(document).ready(function(){
        
         $("tbody").append(
         `<tr id="phtr_${++ph_indx}">
-            <td class="d-inline-block cell col-1" id="phase_${ph_indx}">${ph_indx}</td>
-            <td class="d-inline-block cell col-6">
+            <td class="d-inline-block cell col-2" id="phase_${ph_indx}">${ph_indx}</td>
+            <td class="d-inline-block cell col-4">
                 <textarea cols="1" rows="1" id="desc_${ph_indx}" class="w-100 text-left select-border" placeholder="Write Description..." ></textarea>
             </td>
             <td class="d-inline-block cell col-2"><input type="number" name="phaseDay" id="phaseDay_${ph_indx}"  class="select-border"> </td>
-            <td class="d-inline-block cell col-2"><input type="number" name="phasePrice" id="phasePrice_${ph_indx}"  class="select-border"> </td>
-            <td class="d-inline-block cell col-1">
-                <button type="button" class="btn  del-btn" data-ph-id="phtr_${ph_indx}" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
+            <td class="d-inline-block cell col-2">₹ <input type="number" name="phasePrice" id="phasePrice_${ph_indx}"  class="select-border"> </td>
+            <td class="d-inline-block cell col-2">
+                <button type="button" class="btn btn-info bg-gradient-info" data-save-id="phsave_${ph_indx}" id="save-phase" value=""><i class="fas fa-check"></i></button>
+                <button type="button" class="btn btn-danger bg-gradient-danger" data-ph-id="phtr_${ph_indx}" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
             </td>  
         </tr>`
         ); 
