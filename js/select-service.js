@@ -33,15 +33,15 @@ $(function() {
             if(new_id){
 
                 var tthead = `
-                                                    <thead class="th-bg-color">
-                                                        <tr>
-                                                            <th class="cell">  <input name="all_checkboxes" class="top_check all_checkboxes" id="ch_${new_id}" type="checkbox" value="l2_${new_id}" ></th>
-                                                            <th class="cell"><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border" disabled></th>
-                                                            <th class="cell">₹ <input name="l2_${new_id}_minprice" id="min_price_default" type="input" placeholder="Min Price" class="select-border" ></th>
-                                                            <th class="cell">₹ <input name="l2_${new_id}_maxprice" id="max_price_default" type="input" placeholder="Max Price" class="select-border" ></th>
-                                                            <th class="cell"><button type="button" class="btn" data-toggle="collapse" data-target="#collapse_${new_id}"><i class="fas fa-chevron-down"></i></button></th>
-                                                        </tr>
-                                                    </thead>
+                              <thead class="th-bg-color vcs-thead">
+                                  <tr>
+                                      <th class="cell">  <input name="all_checkboxes" class="top_check all_checkboxes" id="ch_${new_id}" type="checkbox" value="l2_${new_id}" ></th>
+                                      <th class="cell"><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border" disabled></th>
+                                      <th class="cell"><input name="l2_${new_id}_minprice" id="min_price_default" type="input" placeholder="Min Price (₹)" class="select-border" ></th>
+                                      <th class="cell"><input name="l2_${new_id}_maxprice" id="max_price_default" type="input" placeholder="Max Price (₹)" class="select-border" ></th>
+                                      <th class="cell"><button type="button" class="btn" data-toggle="collapse" data-target="#collapse_${new_id}"><i class="fas fa-chevron-down"></i></button></th>
+                                  </tr>
+                              </thead>
                 `;
 
                 var all_ttrow = ``;
@@ -94,6 +94,21 @@ $(function() {
 
 
         }
+
+         // Remove table when select option removed
+         var selected = $(this).find('option:selected');
+         var unselected = $(this).find('option:not(:selected)');
+         selected.attr('data-selected', '1');
+         $.each(unselected, function(index, value){
+           if($(this).attr('data-selected') == '1'){
+                 //this option was selected before
+                 // alert("I was selected before " + $(this).val());
+                 var id = '#t_'+$(this).val();
+                 // alert("my id is : " + id);
+                 $(id).remove();
+                 $(this).attr('data-selected', '0');
+             }
+         });
     }); 
 });
 
@@ -229,7 +244,7 @@ $(document).ready(function(){
             <td class="cell"><input name="customservice" id="customservice_${os_trIndex}"  type="text" class="select-border" required></td>
             <td class="cell">₹ <input name="minPriceDefault" id="min_price_${os_trIndex}" type="text" class="select-border" style="width: 50%;" required></td>
             <td class="cell">₹ <input name="maxPriceDefault" id="max_price_${os_trIndex}" type="text" class="select-border" style="width: 50%;" required></td>
-            <td class="cell"><button type="button" data-tr-id="ctr_${os_trIndex}" id="" class="btn btn-danger bg-gradient-danger remove-service"><i class="far fa-trash-alt"></i></button></td>   
+            <td class="cell"><button type="button" data-tr-id="ctr_${os_trIndex}" id="" class="btn del-btn remove-service"><i class="far fa-trash-alt"></i></button></td>   
         </tr>`
         ); 
         

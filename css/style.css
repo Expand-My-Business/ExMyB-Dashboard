@@ -10079,6 +10079,8 @@ a:focus {
 
 .dropdown .dropdown-menu {
   font-size: 0.85rem;
+  min-width: 0!important;
+  width: 100%;
 }
 
 .dropdown .dropdown-menu .dropdown-header {
@@ -11503,6 +11505,8 @@ margin-right: 10px;
 .th-bg-color{
   background-color: #f5f6fe;
 }
+
+
 /* datepicker */
 .datepicker table tr td span.disabled:hover {
   cursor: not-allowed;
