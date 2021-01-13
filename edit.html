@@ -23,7 +23,11 @@
 
     <!-- Custom styles -->
     <link href="css/style.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <style>
+        .iti {width: 100%;}
+    </style>
+  
 </head>
 
 <body id="page-top">
@@ -331,7 +335,16 @@
                                         </div>
                                         <div class="mb-3">
                                             <label  class="form-label">Contact</label>
-                                            <input type="email" class="form-control" id="setting-input-3" value="+91 9876543210">
+                                            <div class="input-group">
+                                                <!-- <select id="countryCode" name="countryCode" style="max-width: 10%;" class="custom-select form-control  h-100  text-muted" required="">
+                                                    <option value="">+91</option>
+                                                    <option value="">+92</option>
+                                                    <option value="">+1</option>
+                                                    <option value="">+11</option>
+                                                </select> -->
+                                                <input type="text" class="form-control d-none" id="country-Code" value="+91">
+                                                <input type="tel" class="form-control" id="phone" >
+                                            </div>
                                         </div>
                                         
                                         <div class="mb-3">
@@ -409,6 +422,42 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/main.js"></script>
+
+    <script src="js/intlTelInput.js"></script>
+    <script>
+      var input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        // allowDropdown: false,
+        // autoHideDialCode: false,
+        // autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        // formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+        // hiddenInput: "full_number",
+        // initialCountry: "auto",
+        // localizedCountries: { 'de': 'Deutschland' },
+        // nationalMode: false,
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        preferredCountries: ['in'],
+        separateDialCode: true,
+        utilsScript: "build/js/utils.js",nationalMode:false
+      });
+
+     
+        //Get value of countrycode - input is disabled
+        $('.iti__selected-dial-code').bind('DOMSubtreeModified', function(){
+            var myflag = $(this).html();
+            console.log(myflag);
+            $('#country-Code').attr('value',myflag);
+        });
+    </script>
 
 </body>
 
