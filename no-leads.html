@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>404 Error</title>
+    <title>No Leads Found</title>
 
     <!-- Favicons -->
     <link href="img/logo/favicon.png" rel="icon">
@@ -23,14 +23,8 @@
 
     <!-- Custom styles -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        .no-data{
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -80%);
-    }
-    </style>
+
+   
 
 </head>
 
@@ -310,14 +304,31 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="no-data">
+                <div class="container-fluid">
+                    
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between m-2">
+                        <h1 class="h3 mb-0 exmyb-text-black font-weight-bold">Leads</h1>
+                        
+                    </div>
+                    <hr class="mb-4">
+
+                    <nav id="leads-table-tab" class="app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
+                        <a class="flex-sm-fill text-sm-center nav-link active" id="approved-tab" href="leads-approved.html">Approved</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" id="pending-tab" href="leads-pending.html">Pending</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" id="denied-tab" href="leads-denied.html">Denied</a>
+                    </nav>
+
+
+                </div>
+
+                <div class="my-5 py-5">
                     <div class="container-fluid">
 
-                        <!-- 404 Error Text -->
+                        <!-- No lead Found Text -->
                         <div class="text-center ">
-                            <div class="error mx-auto" data-text="404">404</div>
-                            <p class="lead text-gray-800 mb-5">Page Not Found</p>
-                            <p class="text-gray-500 mb-0">It looks like you're lost...</p>
+                            <h1 class=" mx-auto" >"No Leads Found"</h1>
+                            <p class="text-gray-500 ">We have no Leads for you...</p>
                             <a href="index.html">← Back to Dashboard</a>
                         </div>
                         
