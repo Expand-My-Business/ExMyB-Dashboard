@@ -24,6 +24,11 @@ $(document).ready(function(){
     $("tbody").on('click','#remove-phase',function(){
       /*   $(this).parent().parent().remove(); */
 
+      if(ph_indx<=1){
+        alert("Atleast one phase is required");
+        return;
+    }
+
       var child = $(this).closest('tr').nextAll();
 
       child.each(function(){
@@ -35,12 +40,12 @@ $(document).ready(function(){
           var sdes = "desc_" + (iid-1);
           var sdays = "phaseDay_" + (iid-1);
           var sprice = "phasePrice_" + (iid-1);
-            $('tbody tr#' + id +' > td:nth-child(1)').prop('id',sph).html(iid-1);
-            /* $('tbody tr#' + id +' > td:nth-child(1)').html(iid-1); */
-            $('tbody tr#' + id +' > td:nth-child(2) > textarea').prop('id',sdes);
-            $('tbody tr#' + id +' > td:nth-child(3) > input').prop('id',sdays);
-            $('tbody tr#' + id +' > td:nth-child(4) > input').prop('id',sprice);
-            $(this).prop('id',newid);
+          $('tbody tr#' + id +' > td:nth-child(1)').prop('id',sph).html(iid-1);
+          $('tbody tr#' + id +' > td:nth-child(2) > textarea').prop('id',sdes);
+          $('tbody tr#' + id +' > td:nth-child(3) > input').prop('id',sdays);
+          $('tbody tr#' + id +' > td:nth-child(4) > input').prop('id',sprice);
+          $('tbody tr#' + id +' > td:nth-child(5) > button').attr('data-ph-id',newid);
+          $(this).prop('id',newid);
          });
   
             ph_remove = "#" + $(this).data('ph-id');

@@ -11524,6 +11524,9 @@ margin-right: 10px;
     background: #f1f1f1;
 } */
 
+.custom-phase-form input[type=number]{
+  height: 30px;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
