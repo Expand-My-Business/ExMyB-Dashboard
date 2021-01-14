@@ -34,13 +34,139 @@
         .select-border{
             border: 1px solid #d1d3e2!important;
         }
-        .vcs-thead{max-width: 1800px!important;overflow-x:auto;}
-        .vcs-thead th.cell:nth-child(1) {width: 10%!important;}
-        .vcs-thead th.cell:nth-child(2) {width: 40%!important;}
-        .vcs-thead th.cell:nth-child(3) {width: 20%!important;}
-        .vcs-thead th.cell:nth-child(4) {width: 20%!important;}
-        .vcs-thead th.cell:nth-child(5) {width: 10%!important;}
+        /* .vcs-thead{min-width: 800px!important;overflow-x:auto;} */
+        .vcs-thead th:nth-child(1) {width: 10%!important;}
+        .vcs-thead th:nth-child(2) {width: 50%!important;}
+        .vcs-thead th:nth-child(3) {width: 20%!important;}
+        .vcs-thead th:nth-child(4) {width: 20%!important;}
+        .vcs-thead th:nth-child(5) {width: 10%!important;}
 
+
+        #mydiv table {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.vcs-tbody thead {
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+.vcs-tbody th:nth-child(1) {
+    width: 10%;
+}
+.checkbox {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.checkbox input[type=checkbox] {
+    width: auto;
+    opacity: 1e-8;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+.checkbox label {
+    position: relative;
+    min-height: 34px;
+    display: block;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+.checkbox label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 11px 4px;
+    width: 15px;
+    height: 15px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #ced4da;
+}
+.checkbox label:after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 5px;
+    border-bottom: 2px solid #82C424;
+    border-left: 2px solid #82C424;
+    transform: rotate(-45deg) scale(0);
+    transition: transform ease 0.25s;
+    position: absolute;
+    top: 15px;
+    left: 7px;
+}
+.vcs-tbody th:nth-child(2) {
+    width: 40%;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #eaecf4;
+    opacity: 1;
+}
+.vcs-tbody input.form-control {
+    padding: .375rem .25rem!important;
+    font-size: 14px!important;
+}
+.vcs-tbody th:nth-child(3) {
+    width: 20%;
+}
+.vcs-tbody input.form-control {
+    padding: .375rem .25rem!important;
+    font-size: 14px!important;
+}
+.vcs-tbody th:nth-child(4) {
+    width: 20%;
+}
+.vcs-tbody th:nth-child(5) {
+    width: 10%;
+}
+
+.vcs-tbody th:last-child {
+    border-radius: 0 10px 0 0;
+}
+.vcs-tbody button i.fa-chevron-down{
+    color: #fff!important;
+}
+
+.avcs-tbody th:nth-child(1) {
+    width: 46%;
+}
+
+.avcs-tbody th:first-child {
+    border-radius: 10px 0 0 0;
+}
+.avcs-tbody th:nth-child(2) {
+    width: 22%;
+}
+.avcs-tbody th:nth-child(3) {
+    width: 22%;
+}
+.avcs-tbody th:nth-child(4) {
+    width: 10%;
+}
+.avcs-tbody th:last-child {
+    border-radius: 0 10px 0 0;
+}
+@media (min-width:321px) and (max-width:600px) {
+  .vendor-bg-s2{padding: 5px 0!important;background-position: center;    background-repeat: repeat-y;}
+  .vendor-bg-s2 div.pp-form-card{padding: 20px!important;  }
+  .vcs-tbody{width: 500px;overflow-x:auto;}
+  .select2-selection__clear{display: none;}
+  .vcs-tbody th:nth-child(1) {width: 10%!important;}
+  .vcs-tbody th:nth-child(2) {width: 40%!important;}
+  .vcs-tbody th:nth-child(3) {width: 20%!important;}
+  .vcs-tbody th:nth-child(4) {width: 20%!important;}
+  .vcs-tbody th:nth-child(5) {width: 10%!important;}
+
+  thead.avcs-tbody{width: 500px;overflow-x:auto;}
+  .avcs-tbody th:nth-child(1) {width: 40%!important;}
+  .avcs-tbody th:nth-child(2) {width: 25%!important;}
+  .avcs-tbody th:nth-child(3) {width: 25%!important;}
+  .avcs-tbody th:nth-child(4) {width: 10%!important;}
+  
+}
         
     </style>
 
@@ -374,144 +500,23 @@
                                             <div class="mb-2">
                                                 
                                                     <div class="table-responsive" id="mydiv">
-                                                        <!-- <table class="table mb-0 text-center">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="cell">  <input name="checkbox" id="checkbox_all" type="checkbox" class="" ></th>
-                                                                    <th class="cell">Level 3</th>
-                                                                    <th class="cell">₹ <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 25%;"> Min Price </th>
-                                                                    <th class="cell">₹ <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 25%;"> Max Price </th>
-                                                                    <th class="cell"> <button type="button" class="btn" data-toggle="collapse" data-target="#collapseme"><i class="fas fa-chevron-down"></i></button></th>
-                                                                </tr>
-                                                            </thead> 
-                                                            <tbody id="collapseme" class="show">
-                                                                <tr>
-                                                                    <td class="cell">
-                                                                        
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="checkbox" >
-                                                                        
-                                                                    </td>
-                                                                    <td class="cell">Title 1</td>
-                                                                    <td class="cell">
-                                                                        <input name="minPriceDefault" id="sr_min_price" type="input" class="select-border" >
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input name="maxPriceDefault" id="sr_max_price" type="input" class="select-border" >
-                                                                    </td>
-                                                                </tr>
-                                                                
-                                                                <tr>
-                                                                    <td class="cell">
-                                                                        
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="checkbox" >
-                                                                        
-                                                                    </td>
-                                                                    <td class="cell">Title 2</td>
-                                                                    <td class="cell">
-                                                                        <input name="minPriceDefault" id="sr_min_price" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input name="maxPriceDefault" id="sr_max_price" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                </tr>
-                                                                
-                                                                <tr>
-                                                                    <td class="cell">
-                                                                        
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="checkbox" >
-                                                                        
-                                                                    </td>
-                                                                    <td class="cell">Title 2</td>
-                                                                    <td class="cell">
-                                                                        <input name="minPriceDefault" id="sr_min_price" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input name="maxPriceDefault" id="sr_max_price" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table> -->
+                                                       
                                                     </div>
                                                	
                                             </div>
                                         </div> 
-
-                                        <!--  <div class="mb-3">
-                                            <div class="shadow-sm mb-5">
-                                                
-                                                    <div class="table-responsive" id="mydiv">
-                                                        <table class="table mb-0 text-center">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="cell">  <input name="checkbox" id="checkbox_all" type="checkbox" class="" ></th>
-                                                                    <th class="cell">Level 3</th>
-                                                                    <th class="cell">₹ <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 25%;"> Min Price </th>
-                                                                    <th class="cell">₹ <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 25%;"> Max Price </th>
-                                                                    <th class="cell"> <button type="button" class="btn" data-toggle="collapse" data-target="#collapse2"><i class="fas fa-chevron-down"></i></button></th>
-                                                                </tr>
-                                                            </thead> 
-                                                            <tbody id="collapse2" class="collapse">
-                                                                <tr>
-                                                                    <td class="cell">
-                                                                        
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="" >
-                                                                        
-                                                                    </td>
-                                                                    <td class="cell">Title 1</td>
-                                                                    <td class="cell">
-                                                                        <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                </tr>
-                                                                
-                                                                <tr>
-                                                                    <td class="cell">
-                                                                        
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="" >
-                                                                        
-                                                                    </td>
-                                                                    <td class="cell">Title 2</td>
-                                                                    <td class="cell">
-                                                                        <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                </tr>
-                                                                
-                                                                <tr>
-                                                                    <td class="cell">
-                                                                        
-                                                                        <input name="checkbox" id="checkbox_1" type="checkbox" class="" >
-                                                                        
-                                                                    </td>
-                                                                    <td class="cell">Title 2</td>
-                                                                    <td class="cell">
-                                                                        <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;">
-                                                                    </td>
-                                                                </tr>
-                            
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                               	
-                                            </div>
-                                        </div> -->
 
 
                                         
                                          <input type="submit" class="btn btn-success bg-gradient-success" id="save-serivce" value="Save Changes">
                                 
                                     </form>
+                                    
+
                                 </div><!--//app-card-body-->
                                 
                             </div><!--//app-card-->
+
                         </div>
                     </div>
 
@@ -537,26 +542,26 @@
                                             <div class="shadow-sm mb-5">
                                                 
                                                     <div class="table-responsive" id="mydiv">
-                                                        <table class="table mb-0 text-center" id="cs-table">
-                                                            <thead>
+                                                        <table class="table mb-0 text-center vcs-tbody" id="cs-table">
+                                                            <thead class="avcs-tbody">
                                                                 <tr>
                                                                     
-                                                                    <th class="cell">Service Name</th>
-                                                                    <th class="cell">Minimum Price </th>
-                                                                    <th class="cell">Maximum Price </th>
-                                                                    <th class="cell"> Action</th>
+                                                                    <th class="text-white">Service Name</th>
+                                                                    <th class="text-white">Min Price (₹) </th>
+                                                                    <th class="text-white">Max Price (₹)</th>
+                                                                    <th class="text-white"> Action</th>
                                                                 </tr>
                                                             </thead> 
                                                             <tbody id="custom-tbody" class="show">
                                                                 <tr>
                                                                     <td class="cell">
-                                                                        <input name="customservice" id="customservice" type="input" class="select-border" required>
+                                                                        <input name="customservice" id="customservice" type="input" class="select-border form-control" required>
                                                                     </td>
                                                                     <td class="cell">
-                                                                       <input name="minPriceDefault" id="os_min_price" type="input" class="select-border" placeholder="in ₹ " style="width: 50%;" required>
+                                                                       <input name="minPriceDefault" id="os_min_price" type="input" class="select-border form-control" placeholder=""  required>
                                                                     </td>
                                                                     <td class="cell">
-                                                                       <input name="maxPriceDefault" id="os_max_price" type="input" class="select-border" placeholder="in ₹ " style="width: 50%;" required>
+                                                                       <input name="maxPriceDefault" id="os_max_price" type="input" class="select-border form-control" placeholder=""  required>
                                                                     </td>
                                                                     <td class="cell">
                                                                         <!-- <input type="button" value="Remove" class="btn btn-danger bg-gradient-danger remove-service">  --> 
@@ -564,25 +569,6 @@
                                                                     </td>
                                                                 </tr>
                                                                 
-
-                                                               <!--  <tr id="custom-row">
-                                                                    <td class="cell">
-                                                                        <input name="customservice" id="customservice" type="input" class="select-border" required>
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        ₹ <input name="minPriceDefault" id="min_price_default" type="input" class="select-border" style="width: 50%;" required>
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        ₹ <input name="maxPriceDefault" id="max_price_default" type="input" class="select-border" style="width: 50%;" required>
-                                                                    </td>
-                                                                    <td class="cell">
-                                                                        <input type="button" value="Add" class="btn btn-primary bg-gradient-primary ">
-                                                                        <button type="button" id="remove-service" class="btn btn-danger bg-gradient-danger ">Remove</button>
-                                                                      
-                                                                    </td>
-                                                                </tr> -->
-                                                                
-                                                               
                             
                                                             </tbody>
                                                         </table>
@@ -590,6 +576,7 @@
                                                	
                                             </div>
                                         </div>
+
                                         
                                          <input type="submit" class="btn btn-success bg-gradient-success" value="Save Changes">
                                          <input type="button" class="btn btn-info bg-gradient-info" id="add-service" value="+ Add more">
