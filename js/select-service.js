@@ -15,12 +15,14 @@ var myjson = {
 $(function() {
     $('#service-level2').change(function(e) {
         var selected = $(e.target).val();
-        console.dir(selected);
+        // console.dir(selected);
         /* ---task--- */
         var new_id;
-        
+        console.log(selected);
+        console.log(pre_selected);
         for(var i in selected){
             if(pre_selected.includes(selected[i])){
+                console.log(selected[i],"sel");
                 console.log("Yes");
                 new_id = null;
             }else{
@@ -34,12 +36,12 @@ $(function() {
 
                 var tthead = `
                               <thead class="th-bg-color vcs-thead">
-                                  <tr>
-                                      <th class="cell">  <input name="all_checkboxes" class="top_check all_checkboxes" id="ch_${new_id}" type="checkbox" value="l2_${new_id}" ></th>
-                                      <th class="cell"><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border" disabled></th>
-                                      <th class="cell"><input name="l2_${new_id}_minprice" id="min_price_default" type="input" placeholder="Min Price (₹)" class="select-border col-12"  ></th>
-                                      <th class="cell"><input name="l2_${new_id}_maxprice" id="max_price_default" type="input" placeholder="Max Price (₹)" class="select-border col-12" ></th>
-                                      <th class="cell"><button type="button" class="btn" data-toggle="collapse" data-target="#collapse_${new_id}"><i class="fas fa-chevron-down"></i></button></th>
+                                  <tr class="vcs-thead">
+                                      <th class="cell "><input name="all_checkboxes" class="top_check all_checkboxes" id="ch_${new_id}" type="checkbox" value="l2_${new_id}" ></th>
+                                      <th class="cell "><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border" disabled></th>
+                                      <th class="cell "><input name="l2_${new_id}_minprice" id="min_price_default" type="input" placeholder="Min Price (₹)" class="select-border"  ></th>
+                                      <th class="cell "><input name="l2_${new_id}_maxprice" id="max_price_default" type="input" placeholder="Max Price (₹)" class="select-border" ></th>
+                                      <th class="cell "><button type="button" class="btn" data-toggle="collapse" data-target="#collapse_${new_id}"><i class="fas fa-chevron-down"></i></button></th>
                                   </tr>
                               </thead>
                 `;
@@ -59,10 +61,10 @@ $(function() {
                                                             </td>
                                                             <td class="cell"><input type="text" name="l2_${new_id}_l3_${temp[j]['id']}_name" value="${temp[j]['name']}"></td>
                                                             <td class="cell">
-                                                                <input name="l2_${new_id}_l3_${temp[j]['id']}_minprice" id="min_price_default" type="input" class="select-border col-12" >
+                                                                <input name="l2_${new_id}_l3_${temp[j]['id']}_minprice" id="min_price_default" type="input" class="select-border " >
                                                             </td>
                                                             <td class="cell">
-                                                                <input name="l2_${new_id}_l3_${temp[j]['id']}_maxprice" id="max_price_default" type="input" class="select-border col-12" >
+                                                                <input name="l2_${new_id}_l3_${temp[j]['id']}_maxprice" id="max_price_default" type="input" class="select-border " >
                                                             </td>
                                                         </tr>
                         
@@ -106,6 +108,7 @@ $(function() {
                  var id = '#t_'+$(this).val();
                  // alert("my id is : " + id);
                  $(id).remove();
+                 pre_selected = pre_selected.filter((n) => {return n!=$(this).val()});
                  $(this).attr('data-selected', '0');
              }
          });
