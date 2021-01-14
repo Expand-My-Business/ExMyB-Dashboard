@@ -321,7 +321,7 @@
                     <div class="tab-content" id="orders-table-tab-content">
                         <div class="tab-pane fade active show" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
                             <div class="app-card app-card-orders-table shadow-sm mb-5">
-                                <div class="app-card-body">
+                                <div class="app-card-body pb-5">
                                     <form class=" custom-phase-form">
                                         <div class="table-responsive">
                                             <table class="table app-table-hover mb-0 text-center">
@@ -340,8 +340,8 @@
                                                         <td class="d-inline-block cell col-6">
                                                             <textarea cols="1" rows="1" id="desc_1"  class="w-100 text-left select-border" placeholder="Write Description..." required></textarea>
                                                         </td>
-                                                        <td class="d-inline-block cell col-2"><input type="number"  name="phaseDay" id="phaseDay_1"  class="select-border" placeholder="Timeline in Days" required> </td>
-                                                        <td class="d-inline-block cell col-2"><input type="number" name="phasePrice" id="phasePrice_1"  class="select-border" placeholder="Payment in Rupees (₹)" required> </td>
+                                                        <td class="d-inline-block cell col-2"><input type="number" min="1"  name="phaseDay" id="phaseDay_1"  class="select-border" placeholder="Timeline in Days" required> </td>
+                                                        <td class="d-inline-block cell col-2"><input type="number" min="1"  name="phasePrice" id="phasePrice_1"  class="select-border" placeholder="Payment in Rupees (₹)" required> </td>
                                                         <td class="d-inline-block cell col-1">
                                                             <button type="button" class="btn del-btn" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
                                                         </td>              
@@ -365,6 +365,21 @@
                                             </table>
                                             
                                         </div><!--//table-responsive-->
+                                        <div class="container-fluid pt-4">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="text-left">
+                                                        <input type="button" class="btn btn-info bg-gradient-info" id="add-phase" value="+ Add Phase">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="text-right">
+                                                        <input type="submit" class="btn btn-warning bg-gradient-warning" value="Save Draft ">
+                                                        <input type="button" class="btn btn-success bg-gradient-success" id="" value=" Submit Now">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </form>    
                                    
                                 </div><!--//app-card-body-->		
@@ -372,21 +387,7 @@
                             
                             
                         </div><!--//tab-pane-->
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="text-left">
-                                        <input type="button" class="btn btn-info bg-gradient-info" id="add-phase" value="+ Add Phase">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <input type="submit" class="btn btn-warning bg-gradient-warning" value="Save Draft ">
-                                        <input type="button" class="btn btn-success bg-gradient-success" id="" value=" Submit Now">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     
                                
