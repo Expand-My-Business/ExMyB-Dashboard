@@ -11252,6 +11252,102 @@ body.sidebar-toggled footer.sticky-footer {
   height: 35px!important;
 }
 
+.exmyb-btn{
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+a.exmyb-btn{
+  padding:10px
+}
+.exmyb-btn-success{
+  background: #fff;
+  border: 2px solid #1ECD97;
+  color: #1ECD97;
+}
+.exmyb-btn-success:hover {
+  color: white;
+  background: #1ECD97;
+}
+.exmyb-btn-primary{
+  background: #fff;
+  border: 2px solid #4285F4;
+  color: #4285F4;
+}
+.exmyb-btn-primary:hover {
+  color: white;
+  background: #4285F4;
+}
+.exmyb-btn-cyan{
+  background: #fff;
+  border: 2px solid #00BCD4;
+  color: #00BCD4;
+}
+.exmyb-btn-cyan:hover {
+  color: white;
+  background: #00BCD4;
+}
+
+/* button:active {
+  letter-spacing: 2px;
+}
+button:after {
+  content: "SUBMIT";
+} */
+
+/* .onclick {
+  width: 40px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #1ECD97;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+          animation: rotating 2s 0.25s linear infinite;
+}
+.onclick:after {
+  content: "";
+}
+.onclick:hover {
+  color: #1ECD97;
+  background: white;
+}
+
+.validate {
+  font-size: 13px;
+  color: white;
+  background: #1ECD97;
+}
+.validate:after {
+  font-family: "FontAwesome";
+  content: "";
+}
+
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
 .welcome-app-card{
   position: relative;
     background: #fff;
@@ -11501,6 +11597,7 @@ background-color: #D1D3E2;
 transition: 1s;
 margin-right: 10px;
 }
+
 /* Service page */
 .th-bg-color{
   background-color: #f5f6fe;
