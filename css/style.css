@@ -4509,6 +4509,7 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   background-color: #f8f9fc;
   border-bottom: 1px solid #e3e6f0;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 .card-header:first-child {
@@ -11463,7 +11464,7 @@ button:after {
   color: #495057;
   font-weight: bold;
   border-color: #dee2e6 #dee2e6 #fff;
-  border-bottom:5px solid #45CBE9;
+  border-bottom:5px solid #2d2d2d;
 }
 .nav-tabs .nav-link {
   padding: 15px;
@@ -11497,26 +11498,29 @@ button:after {
 }
 .app-icon-holder{
   display: inline-block;
-  background: #f5f6fe;
+  background: #fff;
   width: 50px;
   height: 50px;
   padding-top: 10px;
   font-size: 1rem;
   text-align: center;
   border-radius: 50%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
 }
 .app-icon-holder i{
     color: #191919;
     font-size: 16px;
     line-height: 30px;
-    background:-moz-linear-gradient(bottom, #4e77e0  10%, #000000 100%); 
-    background: -webkit-linear-gradient(bottom, #4e77e0  10%, #000000 100%); 
-    background: linear-gradient(bottom, #4e77e0  10%, #000000 100%);
+    color: #191919;
+    font-size: 16px;
+    line-height: 30px;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color:transparent;
-}
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient( 109.6deg,  rgba(51,236,236,1) 11.2%, rgba(24,39,231,1) 91.1% );
+  }
 .app-card-settings {
   font-size: 1rem;
 }
@@ -11602,7 +11606,12 @@ margin-right: 10px;
 .th-bg-color{
   background-color: #f5f6fe;
 }
-
+/*FAQ*/
+.faq {
+  padding: 0.75rem 1.25rem;
+  margin: 5px;
+}
+.faq a{text-decoration: none;}
 
 /* datepicker */
 .datepicker table tr td span.disabled:hover {
