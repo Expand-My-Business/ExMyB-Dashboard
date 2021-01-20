@@ -24,6 +24,16 @@
     <!-- Custom styles -->
     <link href="css/style.css" rel="stylesheet">
 
+    <style>
+        .goback{color:#000!important;border-radius: 50%;}
+        .goback:hover{
+            background: #F5F6FE;
+            color: #5d6778;
+            border: 1px solid #F5F6FE;
+            
+        }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -142,6 +152,21 @@
                     
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
+                    </button>
+
+                   <!--  <div class="d-none d-sm-inline-block  mr-auto ml-md-3 my-2 my-md-0 mw-100 ">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <button id="goBack" onclick="window.history.go(-1)" class="btn btn-link goback d-none d-sm-inline-block  mr-auto  my-2 my-md-0 mw-100">
+                        <i class="fas fa-arrow-left"></i>
                     </button>
 
                     <!-- Topbar Navbar -->

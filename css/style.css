@@ -1879,9 +1879,15 @@ pre code {
   opacity: 1;
 }
 
-.form-control:disabled, .form-control[readonly] {
+.form-control[readonly] {
   background-color: #eaecf4;
   opacity: 1;
+}
+
+.form-control:disabled{
+  background-color: #eaecf4;
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 input[type="date"].form-control,
@@ -11265,6 +11271,7 @@ body.sidebar-toggled footer.sticky-footer {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.25s ease;
+    box-shadow: 0 2px 5px 0 #eaecf4, 0 2px 10px 0 #f8f9fc;
 }
 a.exmyb-btn{
   padding:10px
@@ -11295,6 +11302,16 @@ a.exmyb-btn{
 .exmyb-btn-cyan:hover {
   color: white;
   background: #00BCD4;
+}
+.exmyb-btn-grey{
+  background: #fff;
+  border: 2px solid #59698d;
+  color: #59698d;
+  
+}
+.exmyb-btn-grey:hover {
+  color: white;
+  background: #59698d;
 }
 
 /* button:active {
@@ -11386,6 +11403,7 @@ button:after {
   padding: 1px 6px;
   color: #000;
   transition:  all .1s;
+  line-height: 1.5;
 }
 .del-btn:hover{
     color: #fff;
@@ -11534,6 +11552,7 @@ button:after {
   font-weight: bold;
 }
 
+
 /* --Client table-- */
 .app-nav-tabs {
   background: #fff;
@@ -11630,9 +11649,9 @@ margin-right: 10px;
     background: #f1f1f1;
 } */
 
-.custom-phase-form input[type=number]{
+/* .custom-phase-form input[type=number]{
   height: 30px;
-}
+} */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
