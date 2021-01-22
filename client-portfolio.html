@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Phases</title>
+    <title>Clients Portforlio</title>
 
     <!-- Favicons -->
     <link href="img/logo/favicon.png" rel="icon">
@@ -22,11 +22,13 @@
         rel="stylesheet">
 
     <!-- Custom styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
+
     <link href="css/style.css" rel="stylesheet">
     <style>
-        .fa-input {
-  font-family: "Font Awesome 5";
-}
+        .modal-header{
+            background-image: linear-gradient(to right, #434343 0%, black 100%);
+        }
     </style>
 
 </head>
@@ -308,14 +310,28 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                   
+                    
+                    
+                    <!--  Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between m-2">
+                        <div class="col-auto ">
+                            <h4 class=" mb-0 exmyb-text-black font-weight-bold">Clients Portfolio</h4>
+                        </div>
+                        <div class="col-auto my-2 ">
+                            <div class="text-center">
+                                <a href="" class="btn exmyb-btn exmyb-btn-cyan"  data-toggle="modal" data-target="#createModal"><i class="fas fa-plus">&nbsp;</i> Create</a>   
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
 
                     <div class="row">
-                        <div class="col-lg-12 mb-4">
-
-                            <!-- Personal Details -->
+                        <div class="col-lg-4 mb-4">
+                            <!-- Clients Details -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-white">Client Requirement</h6>
+                                    <h6 class="m-0 font-weight-bold text-white text-center">Client</h6>
                                 </div>
     
                                 <div class="card-body px-4 w-100">
@@ -323,12 +339,12 @@
                                     <div class="item border-bottom py-3">
                                         <div class="row justify-content-between align-items-center">
                                             <div class="col-auto ">
-                                                <div class="item-label"><strong>Service</strong></div>
-                                                <div class="item-data">Website Development</div>
+                                                <div class="item-label"><strong>Name</strong></div>
+                                                <div class="item-data">Sandy</div>
                                             </div><!--//col-->
                                             <div class="col text-right">
                                                 <div class="app-icon-holder">
-                                                    <i class="fas fa-laptop-code"></i>
+                                                    <i class="fas fa-user"></i>
                                                 </div>
                                             </div><!--//col-->
                                         </div><!--//row-->
@@ -336,21 +352,8 @@
                                     <div class="item border-bottom py-3">
                                         <div class="row justify-content-between align-items-center">
                                             <div class="col-auto">
-                                                <div class="item-label"><strong>TimeLine</strong></div>
-                                                <div class="item-data">15 Days</div>
-                                            </div><!--//col-->
-                                            <div class="col text-right">
-                                                <div class="app-icon-holder">
-                                                    <i class="far fa-calendar-alt"></i>
-                                                </div>
-                                            </div><!--//col-->  
-                                        </div><!--//row-->
-                                    </div><!--//item-->
-                                    <div class="item border-bottom py-3">
-                                        <div class="row justify-content-between align-items-center">
-                                            <div class="col-auto">
-                                                <div class="item-label"><strong>Referces</strong></div>
-                                                <div class="item-data">www.exmyb.com www.google.com www.youtube.com</div> 
+                                                <div class="item-label"><strong>Website Link</strong></div>
+                                                <div class="item-data">www.exmyb.com</div> 
                                             </div><!--//col-->
                                             <div class="col text-right">
                                                 <div class="app-icon-holder">
@@ -359,12 +362,54 @@
                                             </div><!--//col-->
                                         </div><!--//row-->
                                     </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>App Link</strong></div>
+                                                <div class="item-data">www.exmyb.com</div> 
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fab fa-google-play"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Budget</strong></div>
+                                                <div class="item-data">50000</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-rupee-sign"></i>
+                                                </div>
+                                            </div><!--//col-->  
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Year Of Work Done </strong></div>
+                                                <div class="item-data">
+                                                    2017
+                                                </div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div>
                                 <div class="item py-3">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col-auto">
-                                            <div class="item-label"><strong>Requirement </strong></div>
+                                            <div class="item-label"><strong>Description </strong></div>
                                             <div class="item-data text-justify">
-                                                A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ad delectus! Ullam voluptatem vero vel illum aspernatur fugiat odio, quis commodi sed aliquid nostrum hic corporis eligendi! Sequi, quaerat quia?
                                             </div>
                                         </div><!--//col-->
                                     </div><!--//row-->
@@ -373,107 +418,201 @@
                                 </div>
     
                             </div>
-    
                         </div>
-                    </div>
-                    
-                    <!--  Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between m-2">
-                        <h4 class=" mb-0 exmyb-text-black font-weight-bold">Payment Phases</h4>
-                        
-                    </div>
-                    <hr class="mb-4">
 
-                    <div class="tab-content" id="orders-table-tab-content">
-                        <div class="tab-pane fade active show" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
-                            <div class="app-card app-card-orders-table shadow-sm mb-5">
-                                <div class="app-card-body pb-5">
-                                    <form class=" custom-phase-form">
-                                        <div class="table-responsive">
-                                            <table class="table app-table-hover mb-0 text-center">
-                                                <thead>
-                                                    <tr class="row m-0 tr-bg-color">
-                                                        <th class="d-inline-block cell col-1 text-white">Phase</th>
-                                                        <th class="d-inline-block cell col-6 text-white">Description</th>
-                                                        <th class="d-inline-block cell col-2 text-white">Timelines</th>
-                                                        <th class=" d-inline-block cell col-2 text-white">Payment Release</th>
-                                                        <th class=" d-inline-block cell col-1 text-white">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="row m-0 ph-tr" >
-                                                        <td class="d-inline-block cell col-1" id="phase_1" ><sapn style="display:block;padding: 0.375rem 0.75rem;    line-height: 1.5;">1</sapn></td>
-                                                        <td class="d-inline-block cell col-6">
-                                                            <textarea cols="1" rows="2" id="desc_1"  class="form-control w-100 text-left select-border" placeholder="Write Description..." required></textarea>
-                                                            
-                                                        </td>
-                                                        
-                                                        <td class="d-inline-block cell col-2"><input type="number" min="1"  name="phaseDay" id="phaseDay_1"  class="form-control select-border" placeholder="Timeline in Days" required> </td>
-                                                        <td class="d-inline-block cell col-2"><input type="number" min="1"  name="phasePrice" id="phasePrice_1"  class="form-control select-border" placeholder="Payment in Rupees" required> </td>
-                                                        <td class="d-inline-block cell col-1">
-                                                            <button type="button" class="btn  del-btn" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
-                                                        </td>              
-                                                        
-                                                    </tr>
-                                                    <!-- <tr class="row m-0 ph-tr">
-                                                        <td class="d-inline-block cell col-2">2</td>
-                                                        <td class="d-inline-block cell col-4">
-                                                            <textarea cols="1" rows="1" class="w-100 text-left select-border" placeholder="Write Description..." ></textarea>
-                                                        </td>
-                                                        <td class="d-inline-block cell col-2"><input type="number" name="phaseDay" id="phaseDay"  class="select-border"> </td>
-                                                        <td class="d-inline-block cell col-2">₹ <input type="number" name="phasePrice" id="phasePrice"  class="select-border"> </td>
-                                                        <td class="d-inline-block cell col-2">
-                                                            <button type="button" class="btn btn-info bg-gradient-info" id="save-phase" value=""><i class="fas fa-check"></i></button>
-                                                            <button type="button" class="btn btn-danger bg-gradient-danger" id="remove-phase" value=""><i class="far fa-trash-alt"></i></button>
-                                                        </td>                
-                                                        
-                                                    </tr> -->
-                
-                                                </tbody>
-                                            </table>
-                                            
-                                        </div><!--//table-responsive-->
-                                        <div class="container-fluid pt-4">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="text-center">
-                                                        <input type="button" class="btn exmyb-btn exmyb-btn-cyan" id="add-phase" value="+ Add Phase">
-                                                    </div>
+                        <div class="col-lg-4 mb-4">
+                            <!-- Clients Details -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-white text-center">Client</h6>
+                                </div>
+    
+                                <div class="card-body px-4 w-100">
+    
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto ">
+                                                <div class="item-label"><strong>Name</strong></div>
+                                                <div class="item-data">Sandy</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-user"></i>
                                                 </div>
-
-                                                <div class="col-12">
-                                                    <div class="item py-3">
-                                                        <div class="row justify-content-between align-items-center">
-                                                            <div class="col-12">
-                                                                <div class="item-label p-2"><strong>Extra Notes :</strong></div>
-                                                                <div class="item-data">
-                                                                    <textarea cols="1" rows="7" id="note_1" class="form-control w-100 text-left select-border" placeholder="Write Extra Notes....." required=""></textarea>
-                                                                </div> 
-                                                            </div><!--//col-->
-                                                        </div><!--//row-->
-                                                    </div><!--//item-->
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Website Link</strong></div>
+                                                <div class="item-data">www.exmyb.com</div> 
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-globe"></i>
                                                 </div>
-
-                                                <div class="col-12 my-4">
-                                                    <div class="text-right">
-                                                        <input type="submit" class="btn exmyb-btn exmyb-btn-grey" value="Save Draft ">
-                                                        <input type="button" class="btn exmyb-btn exmyb-btn-success" id="" value=" Submit Now">
-                                                    </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>App Link</strong></div>
+                                                <div class="item-data">www.exmyb.com</div> 
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fab fa-google-play"></i>
                                                 </div>
-
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Budget</strong></div>
+                                                <div class="item-data">50000</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-rupee-sign"></i>
+                                                </div>
+                                            </div><!--//col-->  
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Year Of Work Done </strong></div>
+                                                <div class="item-data">
+                                                    2017
+                                                </div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div>
+                                <div class="item py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Description </strong></div>
+                                            <div class="item-data text-justify">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ad delectus! Ullam voluptatem vero vel illum aspernatur fugiat odio, quis commodi sed aliquid nostrum hic corporis eligendi! Sequi, quaerat quia?
                                             </div>
-                                        </div>
-                                    </form>    
-                                   
-                                </div><!--//app-card-body-->		
-                            </div><!--//app-card-->
-                            
-                            
-                        </div><!--//tab-pane-->
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+    
+                                </div>
+    
+                            </div>
+                        </div>
                         
-                    </div>
-                    
-                               
+                        <div class="col-lg-4 mb-4">
+                            <!-- Clients Details -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-white text-center">Client</h6>
+                                </div>
+    
+                                <div class="card-body px-4 w-100">
+    
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto ">
+                                                <div class="item-label"><strong>Name</strong></div>
+                                                <div class="item-data">Sandy</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Website Link</strong></div>
+                                                <div class="item-data">www.exmyb.com</div> 
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-globe"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>App Link</strong></div>
+                                                <div class="item-data">www.exmyb.com</div> 
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fab fa-google-play"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Budget</strong></div>
+                                                <div class="item-data">50000</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-rupee-sign"></i>
+                                                </div>
+                                            </div><!--//col-->  
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Year Of Work Done </strong></div>
+                                                <div class="item-data">
+                                                    2017
+                                                </div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div>
+                                <div class="item py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Description </strong></div>
+                                            <div class="item-data text-justify">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ad delectus! Ullam voluptatem vero vel illum aspernatur fugiat odio, quis commodi sed aliquid nostrum hic corporis eligendi! Sequi, quaerat quia?
+                                            </div>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+    
+                                </div>
+    
+                            </div>
+                        </div>
+
+                       <!--  <div class="col-12 my-2 mb-5">
+                            <div class="text-center">
+                                <a href="" class="btn exmyb-btn exmyb-btn-cyan"  data-toggle="modal" data-target="#createModal"><i class="fas fa-plus"></i> Create</a>   
+                            </div>
+                        </div> -->
+                        
+                    </div>     
 
                 </div>
                 <!-- /.container-fluid -->
@@ -482,6 +621,55 @@
             </div>
             <!-- End of Main Content -->
 
+        <!-- Create Portfolio Modal-->
+        <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-weight-bold text-white" id="exampleModalLabel">Create Portfolio</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="opacity: 1;">
+                            <span aria-hidden="true" class="text-white">×</span>
+                        </button>
+                    </div>
+                    <form class="settings-form">
+                    <div class="modal-body">
+                        
+                            <div class="mb-3">
+                                <label class="form-label">Client Name</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Website Link</label>
+                                <input type="url" class="form-control" id="" placeholder="https://exmyb.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Application Link</label>
+                                <input type="url" class="form-control" id="" placeholder="https://exmyb.com" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Client Budget</label>
+                                <input type="number" class="form-control" id="" placeholder="Amount in INR..." required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Year Of Work Done</label>
+                                <input type="text" class="form-control" id="datepicker" placeholder="5000" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Description</label>
+                                <textarea cols="1" rows="2" id="" class="form-control w-100 text-left select-border" placeholder="Write Description..." required></textarea>
+                            </div>
+                            
+                    </div>
+                    <div class="modal-footer text-center d-sm-block">
+                        <button type="submit" class="btn exmyb-btn exmyb-btn-success">Save</button>
+                    </div> 
+                </form>
+                </div>
+            </div>
+        </div>
              <!-- Footer -->
              <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -526,13 +714,14 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+	
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/main.js"></script>
-    <script src="js/phase.js"></script>
 
 </body>
 
