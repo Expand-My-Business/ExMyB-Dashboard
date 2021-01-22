@@ -38,7 +38,7 @@ $(function() {
                               <thead class="vcs-tbody">
                                   <tr class="">
                                       <th class=" "><input name="all_checkboxes" class="top_check all_checkboxes" id="ch_${new_id}" type="checkbox" value="l2_${new_id}" ></th>
-                                      <th class=" "><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border form-control" disabled></th>
+                                      <th class=" "><input type="text" value="${myjson[new_id]['l2_info']['name']}" name="l2_${new_id}_name" class="select-border form-control d-none" disabled></th>
                                       <th class=" "><input name="l2_${new_id}_minprice" id="min_price_default" type="input" placeholder="Min Price (₹)" class="select-border form-control text-center"  ></th>
                                       <th class=" "><input name="l2_${new_id}_maxprice" id="max_price_default" type="input" placeholder="Max Price (₹)" class="select-border form-control text-center" ></th>
                                       <th class=" "><button type="button" class="btn" data-toggle="collapse" data-target="#collapse_${new_id}"><i class="fas fa-chevron-down"></i></button></th>
