@@ -9,7 +9,7 @@ $(document).ready(function(){
         `<tr id="phtr_${++ph_indx}">
             <td class="d-inline-block cell col-1" id="phase_${ph_indx}"><sapn style="display:block;padding: 0.375rem 0.75rem;line-height: 1.5;">${ph_indx}</sapn></td>
             <td class="d-inline-block cell col-6">
-                <textarea cols="1" rows="1" id="desc_${ph_indx}" class="form-control w-100 text-left select-border" placeholder="Write Description..." ></textarea>
+                <textarea cols="1" rows="2" id="desc_${ph_indx}" class="form-control w-100 text-left select-border" placeholder="Write Description..." ></textarea>
             </td>
             <td class="d-inline-block cell col-2"><input type="number" name="phaseDay" id="phaseDay_${ph_indx}"  class="form-control select-border" placeholder="Timeline in Days"> </td>
             <td class="d-inline-block cell col-2"><input type="number" name="phasePrice" id="phasePrice_${ph_indx}"  class="form-control select-border" placeholder="Payment in Rupees"> </td>

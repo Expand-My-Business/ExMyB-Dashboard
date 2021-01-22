@@ -11554,6 +11554,9 @@ button:after {
 
 
 /* --Client table-- */
+.tr-bg-color{
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
 .app-nav-tabs {
   background: #fff;
   padding: 0;

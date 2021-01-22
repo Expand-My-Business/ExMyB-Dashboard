@@ -308,15 +308,81 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+
+                            <!-- Personal Details -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-white">Client Requirement</h6>
+                                </div>
+    
+                                <div class="card-body px-4 w-100">
+    
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto ">
+                                                <div class="item-label"><strong>Service</strong></div>
+                                                <div class="item-data">Website Development</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-laptop-code"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>TimeLine</strong></div>
+                                                <div class="item-data">15 Days</div>
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="far fa-calendar-alt"></i>
+                                                </div>
+                                            </div><!--//col-->  
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Referces</strong></div>
+                                                <div class="item-data">www.exmyb.com www.google.com www.youtube.com</div> 
+                                            </div><!--//col-->
+                                            <div class="col text-right">
+                                                <div class="app-icon-holder">
+                                                    <i class="fas fa-globe"></i>
+                                                </div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                <div class="item py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Requirement </strong></div>
+                                            <div class="item-data text-justify">
+                                                A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to
+                                            </div>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                    </div>
                     
-                    <!-- Page Heading -->
+                    <!--  Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between m-2">
-                        <h1 class="h3 mb-0 exmyb-text-black font-weight-bold">Payment Phases</h1>
+                        <h4 class=" mb-0 exmyb-text-black font-weight-bold">Payment Phases</h4>
                         
                     </div>
                     <hr class="mb-4">
-
-                   
 
                     <div class="tab-content" id="orders-table-tab-content">
                         <div class="tab-pane fade active show" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
@@ -326,20 +392,22 @@
                                         <div class="table-responsive">
                                             <table class="table app-table-hover mb-0 text-center">
                                                 <thead>
-                                                    <tr class="row m-0">
-                                                        <th class="d-inline-block cell col-1">Phase</th>
-                                                        <th class="d-inline-block cell col-6">Description</th>
-                                                        <th class="d-inline-block cell col-2">Timelines</th>
-                                                        <th class=" d-inline-block cell col-2">Payment Release</th>
-                                                        <th class=" d-inline-block cell col-1">Action</th>
+                                                    <tr class="row m-0 tr-bg-color">
+                                                        <th class="d-inline-block cell col-1 text-white">Phase</th>
+                                                        <th class="d-inline-block cell col-6 text-white">Description</th>
+                                                        <th class="d-inline-block cell col-2 text-white">Timelines</th>
+                                                        <th class=" d-inline-block cell col-2 text-white">Payment Release</th>
+                                                        <th class=" d-inline-block cell col-1 text-white">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="row m-0 ph-tr">
+                                                    <tr class="row m-0 ph-tr" >
                                                         <td class="d-inline-block cell col-1" id="phase_1" ><sapn style="display:block;padding: 0.375rem 0.75rem;    line-height: 1.5;">1</sapn></td>
                                                         <td class="d-inline-block cell col-6">
-                                                            <textarea cols="1" rows="1" id="desc_1"  class="form-control w-100 text-left select-border" placeholder="Write Description..." required></textarea>
+                                                            <textarea cols="1" rows="2" id="desc_1"  class="form-control w-100 text-left select-border" placeholder="Write Description..." required></textarea>
+                                                            
                                                         </td>
+                                                        
                                                         <td class="d-inline-block cell col-2"><input type="number" min="1"  name="phaseDay" id="phaseDay_1"  class="form-control select-border" placeholder="Timeline in Days" required> </td>
                                                         <td class="d-inline-block cell col-2"><input type="number" min="1"  name="phasePrice" id="phasePrice_1"  class="form-control select-border" placeholder="Payment in Rupees" required> </td>
                                                         <td class="d-inline-block cell col-1">
@@ -367,17 +435,32 @@
                                         </div><!--//table-responsive-->
                                         <div class="container-fluid pt-4">
                                             <div class="row">
-                                                <div class="col-6">
-                                                    <div class="text-left">
+                                                <div class="col-12">
+                                                    <div class="text-center">
                                                         <input type="button" class="btn exmyb-btn exmyb-btn-cyan" id="add-phase" value="+ Add Phase">
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
+
+                                                <div class="col-12">
+                                                    <div class="item py-3">
+                                                        <div class="row justify-content-between align-items-center">
+                                                            <div class="col-12">
+                                                                <div class="item-label p-2"><strong>Extra Notes :</strong></div>
+                                                                <div class="item-data">
+                                                                    <textarea cols="1" rows="1" id="note_1" class="form-control w-100 text-left select-border" placeholder="Write Extra Notes....." required=""></textarea>
+                                                                </div> 
+                                                            </div><!--//col-->
+                                                        </div><!--//row-->
+                                                    </div><!--//item-->
+                                                </div>
+
+                                                <div class="col-12 my-4">
                                                     <div class="text-right">
                                                         <input type="submit" class="btn exmyb-btn exmyb-btn-grey" value="Save Draft ">
                                                         <input type="button" class="btn exmyb-btn exmyb-btn-success" id="" value=" Submit Now">
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </form>    
